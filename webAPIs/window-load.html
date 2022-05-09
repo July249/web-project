@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window Load</title>
+    <script src="test.js" defer>
+      /* js loaded가 가장 먼저 출력된다. */
+    </script>
+  </head>
+  <body>
+    <script>
+      // 브라우저가 html 파일을 열게 되면 웹페이지 렌더링에 필요한 것이 html 파일 리딩이 완료되면 document를 먼저 출력하여 보여준 뒤에 js 파일을 fetching 한다.
+      // only document
+      window.addEventListener('DOMContentLoaded', () => {
+        console.log('load');
+      });
+      // 브리우저가 html 파일을 열게 되면 웹페이지 렌더링에 필요한 것이 모두 fetching 되면, load가 출력됨.
+      // after resource (css, images)
+      window.addEventListener('load', () => {
+        console.log('load');
+      });
+      // before unloaded
+      window.addEventListener('beforeload', () => {
+        console.log('beforeunload');
+      });
+      // resource is being unloaded
+      window.addEventListener('unload', () => {
+        console.log('unload');
+      });
+    </script>
+  </body>
+</html>
