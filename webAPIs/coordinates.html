@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coordinates</title>
+    <style>
+      body {
+        background-color: black;
+        margin: 0;
+        /* overflow: hidden; 스크롤이 안되게 하는 방법 */
+      }
+      #box {
+        width: 100px;
+        height: 100px;
+        background-color: bisque;
+        margin: 20px 0;
+      }
+      #specialBox {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(243, 186, 102);
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+    <div id="box"></div>
+    <div id="box"></div>
+    <div id="box"></div>
+    <div id="box"></div>
+    <div id="box"></div>
+    <div id="box"></div>
+    <div id="specialBox" onclick="pos"></div>
+    <div id="box"></div>
+    <div id="box"></div>
+    <div id="box"></div>
+    <div id="box"></div>
+    <div id="box"></div>
+    <div id="box"></div>
+    <div id="box"></div>
+    <script>
+      const pos = document.getElementById('specialBox');
+
+      pos.addEventListener('click', (event) => {
+        const rect = pos.getBoundingClientRect();
+        console.log(rect);
+        console.log(`client: ${event.clientX}, ${event.clientY}`);
+        console.log(`page: ${event.pageX}, ${event.pageY}`);
+      });
+    </script>
+  </body>
+</html>
