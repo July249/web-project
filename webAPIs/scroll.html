@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window Scroll APIs</title>
+    <style>
+      body {
+        background-color: black;
+        margin: 0;
+        /* overflow: hidden; 스크롤이 안되게 하는 방법 */
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: bisque;
+        margin: 20px 0;
+      }
+      #specialBox {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(243, 186, 102);
+        margin: 20px 0;
+      }
+
+      .buttons {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div id="specialBox" class="box" onclick="pos"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <div class="buttons">
+      <button class="scroll__by" onclick="scrollX">Scroll by 100px(y)</button>
+      <button class="scroll__to" onclick="scrollY">Scroll to 100px(y)</button>
+      <button class="scroll__into" onclick="">Scroll into special Box</button>
+    </div>
+
+    <script>
+      const pos = document.getElementById('specialBox');
+
+      pos.addEventListener('click', (event) => {
+        const rect = pos.getBoundingClientRect();
+        console.log(rect);
+        console.log(`client: ${event.clientX}, ${event.clientY}`);
+        console.log(`page: ${event.pageX}, ${event.pageY}`);
+      });
+
+      const scrollBy = document.querySelector('.scroll__by');
+      const scrollTo = document.querySelector('.scroll__to');
+      const scrollInto = document.querySelector('.scroll__into');
+
+      scrollBy.addEventListener('click', (event) => {
+        window.scrollBy({ top: 100, left: 0, behavior: 'smooth' });
+        //window.scrollBy(0, 100);
+      });
+      scrollTo.addEventListener('click', (event) => {
+        window.scrollTo(0, 100);
+      });
+      scrollInto.addEventListener('click', (event) => {
+        specialBox.scrollIntoView();
+
+        //window.scroll(
+        //  pos.getBoundingClientRect().left,
+        //  pos.getBoundingClientRect().top
+        //);
+      });
+    </script>
+  </body>
+</html>
