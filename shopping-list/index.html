@@ -13,66 +13,29 @@
     ></script>
   </head>
   <body>
-    <header>
-      <h1 class="title">Shopping List</h1>
-    </header>
-    <section id="shopping_list">
-      <ul class="container scroll">
-        <li>
-          <div class="item">milk</div>
-          <button class="delete"><i class="fa-solid fa-trash-can"></i></button>
-        </li>
-        <li>
-          <div class="item">milk</div>
-          <button class="delete"><i class="fa-solid fa-trash-can"></i></button>
-        </li>
-        <li>
-          <div class="item">milk</div>
-          <button class="delete"><i class="fa-solid fa-trash-can"></i></button>
-        </li>
-        <li>
-          <div class="item">milk</div>
-          <button class="delete"><i class="fa-solid fa-trash-can"></i></button>
-        </li>
-        <li>
-          <div class="item">milk</div>
-          <button class="delete"><i class="fa-solid fa-trash-can"></i></button>
-        </li>
-        <li>
-          <div class="item">milk</div>
-          <button class="delete"><i class="fa-solid fa-trash-can"></i></button>
-        </li>
-        <li>
-          <div class="item">milk</div>
-          <button class="delete"><i class="fa-solid fa-trash-can"></i></button>
-        </li>
-        <li>
-          <div class="item">milk</div>
-          <button class="delete"><i class="fa-solid fa-trash-can"></i></button>
-        </li>
-        <li>
-          <div class="item">milk</div>
-          <button class="delete"><i class="fa-solid fa-trash-can"></i></button>
-        </li>
-        <li>
-          <div class="item">milk</div>
-          <button class="delete"><i class="fa-solid fa-trash-can"></i></button>
-        </li>
-        <li>
-          <div class="item">milk</div>
-          <button class="delete"><i class="fa-solid fa-trash-can"></i></button>
-        </li>
-        <li>
-          <div class="item">milk</div>
-          <button class="delete"><i class="fa-solid fa-trash-can"></i></button>
+    <section class="list">
+      <header class="header">Shopping List</header>
+      <ul class="items scroll">
+        <li class="item__row">
+          <div class="item">
+            <span class="item__name">milk</span>
+            <button class="item__delete">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </div>
+          <div class="item__divider"></div>
         </li>
       </ul>
-    </section>
-    <section id="shopping_add">
-      <div class="typearea">
-        <input type="text" placeholder="Add what you need!(ex. milk, orange)" />
-        <button class="add"><i class="fa-solid fa-cart-plus"></i></button>
-      </div>
+      <footer class="footer">
+        <input
+          type="text"
+          class="footer__input"
+          placeholder="Add what you need!(ex. milk, orange)"
+        />
+        <button class="footer__button">
+          <i class="fa-solid fa-cart-plus"></i>
+        </button>
+      </footer>
     </section>
   </body>
 </html>
