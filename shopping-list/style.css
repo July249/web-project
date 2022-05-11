@@ -1,0 +1,118 @@
+/* Universal */
+:root {
+  /* Color */
+  --color-light-gray: #cdcdcd;
+  --color-light-orange: coral;
+  /* font-size */
+}
+
+* {
+  border: 1px solid red;
+  color: black;
+}
+
+/* Typography */
+h1 {
+  font-size: 48px;
+  color: whitesmoke;
+}
+
+/* Global */
+body {
+  background-color: var(--color-light-orange);
+}
+
+/* Header */
+
+header {
+  position: relative;
+  text-align: center;
+  margin: auto;
+}
+
+/* Shopping list */
+.container {
+  position: relative;
+  justify-content: center;
+  margin: auto;
+  margin-top: 20px;
+  width: 500px;
+  height: 540px;
+  background-color: blanchedalmond;
+}
+
+.scroll {
+  overflow: auto;
+  margin: auto;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  display: block;
+  height: auto;
+  width: auto;
+}
+
+/* list */
+li {
+  display: flex;
+  justify-content: space-between;
+  height: 32px;
+  margin: auto;
+  padding: 10px;
+  border-bottom: 2px solid rgb(151, 151, 151);
+}
+
+.item {
+  margin: 0 8px;
+  width: 100%;
+  font-size: 24px;
+}
+
+.delete {
+  margin: 0 10px;
+}
+
+.delete .fa-trash-can {
+  font-size: 18px;
+}
+
+.delete .fa-trash-can:hover {
+  color: red;
+  transform: scale(1.1);
+}
+
+/* shopping add */
+#shopping_add {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  height: 32px;
+  margin: auto;
+  padding: 10px;
+}
+
+/* type Area */
+.typearea {
+  margin: auto;
+}
+
+input {
+  width: 400px;
+  height: 28px;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+
+.add {
+  margin: 0 10px;
+  padding: 6px;
+}
+
+.fa-cart-plus {
+  font-size: 18px;
+}
+
+.add .fa-cart-plus:hover {
+  color: rgb(255, 176, 7);
+  transform: scale(1.1);
+}
