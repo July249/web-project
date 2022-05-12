@@ -46,7 +46,7 @@ ul {
   border: none;
 }
 
-.item__delete:hover {
+.item__delete i:hover {
   color: red;
   transform: scale(1.1);
 }
