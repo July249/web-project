@@ -6,6 +6,7 @@ const value = document.querySelector('#value');
 const btns = document.querySelectorAll('.btn');
 
 btns.forEach((btn) => {
+  //console.log(btn);
   btn.addEventListener('click', (event) => {
     const styles = event.currentTarget.classList;
     if (styles.contains('decrease')) {
